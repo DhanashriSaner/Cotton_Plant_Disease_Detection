@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotton Disease Detection using Deep Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/all.min.css')}}"> <!-- fontawesome -->
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/tailwind.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/tooplate-antique-cafe.css')}}">
+
+<!--
+
+Tooplate 2126 Antique Cafe
+
+https://www.tooplate.com/view/2126-antique-cafe
+
+-->
+</head>
+
+<body>
+
+
+    <div id="contact" class="parallax-window relative" data-parallax="scroll" data-image-src="{{ url_for ('static', filename='img/collage_2.png')}}">
+        <div class="container mx-auto tm-container pt-24 pb-48 sm:py-48">
+            <div class="flex flex-col lg:flex-row justify-around items-center lg:items-stretch">
+                <div class="flex-1 rounded-xl px-10 py-12 m-5 bg-white bg-opacity-80 tm-item-container">
+                    <div class="col-sm" style="margin-bottom: 23px;">
+                        <span class="border border-primary">
+                            <img src="{{ user_image }}" alt="User Image" class="img-thumbnail">
+                    <!-- <img src="{{pred_output}}" alt="User Image" class="img-thumbnail"> -->
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+
+                    <div class="flex-1 rounded-xl p-12 pb-14 m-5 bg-white bg-opacity-50 tm-item-container">
+                        <h6 class="text-3xl mb-6 tm-text-green">
+                            {{pred_output}} </h6>
+                    
+                        <ol>
+                        <li><b> Disease Name / रोग का नाम / રોગ નામ / ರೋಗದ ಹೆಸರು : </b></span></li>
+                        <li style="line-height: 100%;">Attack of Leaf Sucking and Chewing Pests </br> चुरडा,मावा रोग </br>
+                            લીફ ચૂસીને જીવાતો જીવાતોનો હુમલો </br>
+                            ಎಲೆ ಹೀರುವ ಮತ್ತು ಚೂಯಿಂಗ್ ಕೀಟಗಳ ದಾಳಿ</li>
+                        </ol>
+
+                        <hr class="w-100 mx-auto ">
+                    
+                        <h1><b> Solution for Disease / रोग का उपचार / રોગનો ઉપાય / ರೋಗಕ್ಕೆ ಪರಿಹಾರ : </b></h1>
+
+                        <p><strong>Use any one Systemic Insecticide, which contain<i> Flonicamid 50%/ Thiamethoxam 25% WG / Imidacloprid
+                                    17.8 Sl / Acetamiprid 20% SP.</i></strong></p></br>
+
+                        <p>किसी भी एक प्रणालीगत कीटनाशक का प्रयोग करें, जिसमें फ्लोनिकमिड ५०% / थियामेथोक्साम 25% WG / इमिडाक्लोप्रिड
+                            १७.८ एसएल / एसिटामिप्रिड २०% एसपी है।</p></br>
+
+                        <p>કોઈપણ એક પ્રણાલીગત જંતુનાશક દવાઓનો ઉપયોગ કરો, જેમાં ફ્લોનીકેમિડ 50% / થાઇઆમેથોક્સમ 25% WG / ઇમિડાકલોપ્રિડ
+                            17.8 એસએલ / એસેટામિપ્રિડ 20% એસપી હોય છે.</p></br>
+
+                        <p>ಫ್ಲೋನಿಕಾಮಿಡ್ 50% / ಥಿಯಾಮೆಥೊಕ್ಸಮ್ 25% WG / ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ 17.8 ಎಸ್ಎಲ್ / ಅಸೆಟಾಮಿಪ್ರಿಡ್ 20% ಎಸ್ಪಿ ಹೊಂದಿರುವ
+                            ಯಾವುದೇ ಒಂದು ವ್ಯವಸ್ಥಿತ ಕೀಟನಾಶಕವನ್ನು ಬಳಸಿ.</p></br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for ('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='js/parallax.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='js/jquery.singlePageNav.min.js')}}"></script>
+    <script>
+
+        function checkAndShowHideMenu() {
+            if(window.innerWidth < 768) {
+                $('#tm-nav ul').addClass('hidden');
+            } else {
+                $('#tm-nav ul').removeClass('hidden');
+            }
+        }
+
+        $(function(){
+            var tmNav = $('#tm-nav');
+            tmNav.singlePageNav();
+
+            checkAndShowHideMenu();
+            window.addEventListener('resize', checkAndShowHideMenu);
+
+            $('#menu-toggle').click(function(){
+                $('#tm-nav ul').toggleClass('hidden');
+            });
+
+            $('#tm-nav ul li').click(function(){
+                if(window.innerWidth < 768) {
+                    $('#tm-nav ul').addClass('hidden');
+                }
+            });
+
+            $(document).scroll(function() {
+                var distanceFromTop = $(document).scrollTop();
+
+                if(distanceFromTop > 100) {
+                    tmNav.addClass('scroll');
+                } else {
+                    tmNav.removeClass('scroll');
+                }
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
