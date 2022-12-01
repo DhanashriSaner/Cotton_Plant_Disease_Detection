@@ -1,0 +1,6 @@
+Flask
+gunicorn
+Python
+TensorFlow
+Keras 
+NumPy
