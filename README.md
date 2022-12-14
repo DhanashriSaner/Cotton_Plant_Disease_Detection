@@ -27,4 +27,9 @@ Keras <br>
 NumPy<br>
 <h2>How to use App?</h2>
 Run ‘aap.py’ file in spyder or you can run it using anaconda prompt. Then you will get localhost address like ‘http://127.0.0.1:5000/‘ enter it in any browser in your system.
-<h2>
+<h2>Working of Model</h2>
+<h4>Input Image</h4>
+ <img align="center" alt="ASD" width = 900 src="https://user-images.githubusercontent.com/88526990/207537691-558902ac-342e-44ad-8713-aa270a6ad13c.png">
+ <br>
+ <h4>Output Image</h4>
+ <img align="center" alt="ASD" width = 900 src="https://user-images.githubusercontent.com/88526990/207537928-fdb71cbf-5342-40cd-a91c-2efcd8371985.png">
