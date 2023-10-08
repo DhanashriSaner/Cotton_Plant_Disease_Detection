@@ -33,3 +33,4 @@ Run ‘aap.py’ file in spyder or you can run it using anaconda prompt. Then yo
  <br>
  <h4>Output Image</h4>
  <img align="center" alt="ASD" width = 900 src="https://user-images.githubusercontent.com/102846990/209566229-385d811a-8882-4c3b-9b38-6718ddf83007.JPG">
+<br>
